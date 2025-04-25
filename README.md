@@ -1,8 +1,5 @@
-NAME: Lokesh B
-
-REG NO: 24900370
-
-EXP NO 3 : IMPLEMENTATION OF HALF ADDER AND HALF SUBTRACTOR
+HALF_ADDER_SUBTRACTOR
+Implementation-of-Half-Adder-and-Half Subtractor-circuit
 
 AIM:
 
@@ -20,7 +17,7 @@ Half adder is a combinational circuit that performs simple addition of two binar
 
 Sum = A’B+AB’ =A ⊕ B Carry = AB
 
-![300513057-bd4a0b2c-cdbc-4184-ab08-81578f121e1f](https://github.com/user-attachments/assets/aa1e0b79-1c30-4023-ac4a-67edfd4c2ca9)
+![300513057-bd4a0b2c-cdbc-4184-ab08-81578f121e1f](https://github.com/user-attachments/assets/fe440fb8-5d22-458a-986d-bb977bd256c7)
 
 
 Figure -01 HALF ADDER
@@ -31,10 +28,24 @@ The half-subtractor is a combinational circuit which is used to perform subtract
 
 Diff = A’B+AB’ =A ⊕ B Borrow = A’B
 
-![300513222-d76b099c-513f-4e7c-843a-e2fd028a531a](https://github.com/user-attachments/assets/b3ab6e84-939b-4f46-8d80-da06a0b8b73b)
+![300513222-d76b099c-513f-4e7c-843a-e2fd028a531a](https://github.com/user-attachments/assets/52ebf6e4-08b3-4fa3-9bf0-7951496eaffb)
 
 
-PROCEDURE
+Figure -02 HALF Subtractor
+
+Truthtable
+
+HALF ADDER TRUTHTABLE
+
+![385144707-ee0c7cc4-4b0f-462c-bf97-eecfacb7c1ee](https://github.com/user-attachments/assets/b35503d8-1fa2-4ce8-a8ee-080802f812a8)
+
+
+HALF SUBTRACTOR TRUTHTABLE
+
+![388824561-ec06694e-4c6b-43bf-90a7-aca635af6b94](https://github.com/user-attachments/assets/69fac568-b983-4c6e-b41d-cf8710d1ceba)
+
+
+Procedure
 
 Type the program in Quartus software.
 
@@ -47,36 +58,29 @@ Create nodes for inputs and outputs to generate the timing diagram.
 For different input combinations generate the timing diagram.
 
 Program:
+~~~
+module ex03(a,b,cy,sm,df,bo);
+input a,b;
+output sm,cy,df,bo;
+xor (sm,a,b);
+and (cy,a,b);
+xor (df,a,b);
+and (bo,~a,b);
+endmodule
+~~~
+/* Program to design a half adder and half subtractor circuit and verify its truth table in quartus using Verilog programming.
 
-![400645442-86fa317c-d317-4e8a-8b05-5d1db398a450](https://github.com/user-attachments/assets/d67eaabb-bd18-4023-8c5b-bb93a684532d)
+Developed by: Lokesh B reg.no:-212224040172
 
+RTL Schematic
 
-TRUTH TABLE:
-
-HALF ADDER
-
-![395010934-44550a0b-1260-4df2-8f9f-e8f1513b6969](https://github.com/user-attachments/assets/2a8fa6ff-0801-46cd-8dd4-4514456d7e1a)
-
-HALF SUBTRACTOR
-
-![395011124-f18592db-9e1e-4f90-9701-8ed2d0ebc5f3](https://github.com/user-attachments/assets/ed3825f0-d691-4517-8822-04e0d4ea9695)
-
-RTL REALIZATION OUTPUT:
-
-![400645724-de7e5514-b487-4c39-bf0c-4fd7778508e4](https://github.com/user-attachments/assets/ca62fbfe-49ab-4ea9-8b45-e68bfd110f9b)
-
-
-![400645775-dd29871a-2a1a-457a-8066-12ba82d31e7f](https://github.com/user-attachments/assets/50d8f3ae-7dbf-46a3-a892-24cab8ad3f32)
+![385143417-0667ce93-345a-4bec-8c25-a2cf7cf47731](https://github.com/user-attachments/assets/49f02346-bcc3-41eb-a55b-a17f2199b2be)
 
 
-TIMING DIAGRAM:
-
-![400645858-d1b14557-50d9-4d6d-b129-7cfbd253697b](https://github.com/user-attachments/assets/f8afa534-1cb0-45c3-ba67-002c8e3af780)
-
-
-![400645912-a8c72561-fd6f-4271-85b0-983517616754](https://github.com/user-attachments/assets/634d006c-424c-4a08-9c7e-d6e2bb8ba538)
+Output/TIMING Waveform
+![385143495-0564f8a4-97da-4ce7-8740-eb97c0f35d0a](https://github.com/user-attachments/assets/79c32928-8d31-4327-a625-689def88275f)
 
 
-RESULT
+Result: The half adder and half subtractor circuit and its truth table in Quartus are verified using Verilog programming.
 
-Designed and verified the half adder & half subractor circuit and its truth table in quartus Il using Verilog programming successfully.
+ 
